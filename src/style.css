@@ -1,16 +1,13 @@
 body {
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 :root {
   --blue: #00acdc;
-}
-
-html {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
 }
 
 .header {
@@ -23,20 +20,24 @@ html {
 }
 
 .logo {
+  display: block;
   height: 40px;
   width: 40px;
 }
 
 .nav {
-  height: 60px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav_list {
+  height: 100%;
   display: flex;
   list-style: none;
-  align-items: center;
   padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .nav_item:not(:first-child) {
@@ -44,17 +45,20 @@ html {
 }
 
 .nav_link {
-  display: inline-block;
+  display: block;
   position: relative;
-  line-height: 15px;
+  line-height: 60px;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+  padding: 0;
+  text-align: center;
 }
 
 .nav_link:hover {
   text-decoration: none;
   text-decoration-color: var(--blue);
+  color: var(--blue);
 }
 
 .is-active::after {
